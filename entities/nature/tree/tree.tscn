@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ck14ytn4y72gx"]
+
+[ext_resource type="Texture2D" uid="uid://b5aj558ns6upd" path="res://assents/tilesets/Tree.png" id="1_qwxo3"]
+
+[node name="Tree" type="Node2D" unique_id=1112396333 groups=["arvores"]]
+position = Vector2(0, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=912777891]
+position = Vector2(1.8189894e-12, 0)
+scale = Vector2(0.11425781, 0.11425782)
+texture = ExtResource("1_qwxo3")

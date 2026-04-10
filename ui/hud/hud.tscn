@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bo2mbs70sumwv"]
+
+[ext_resource type="Script" uid="uid://bub5eojep6frr" path="res://ui/hud/hud.gd" id="1_xmswo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmswo"]
+bg_color = Color(0.06208223, 0.72379714, 3.85046e-07, 1)
+
+[node name="Hud" type="CanvasLayer" unique_id=891870771]
+script = ExtResource("1_xmswo")
+
+[node name="BarraReflorestamento" type="ProgressBar" parent="." unique_id=1190018862]
+offset_left = 569.0
+offset_top = 4.0
+offset_right = 717.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_xmswo")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=543405478]
+offset_left = 405.0
+offset_top = 1.0
+offset_right = 445.0
+offset_bottom = 41.0
+mouse_filter = 2
+
+[node name="TextoCreditos" type="Label" parent="." unique_id=1018381113]
+offset_left = 171.0
+offset_top = -6.0
+offset_right = 261.0
+offset_bottom = 43.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=101997857]
+offset_left = 1.0
+offset_top = 662.0
+offset_right = 444.0
+offset_bottom = 720.0
+
+[node name="BotaoArvore" type="Button" parent="HBoxContainer" unique_id=1727383655]
+layout_mode = 2
+text = "Plantar Árvore(20)"
+
+[node name="BotaoCentro" type="Button" parent="HBoxContainer" unique_id=1106410297]
+layout_mode = 2
+text = "Contruir Centro(100)"
+
+[node name="BotaoAgente" type="Button" parent="HBoxContainer" unique_id=689099283]
+layout_mode = 2
+text = "EcoAgente(50)"
+
+[node name="BotaoBarreira" type="Button" parent="HBoxContainer" unique_id=112875117]
+layout_mode = 2
+text = "Construir Barreira(15)"
+
+[connection signal="pressed" from="HBoxContainer/BotaoArvore" to="." method="_on_botao_arvore_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotaoCentro" to="." method="_on_botao_centro_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotaoAgente" to="." method="_on_botao_agente_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotaoBarreira" to="." method="_on_botao_barreira_pressed"]

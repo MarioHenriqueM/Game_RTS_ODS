@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bsds5ev1hce7b"]
+
+[ext_resource type="Script" uid="uid://ncu4th6q072c" path="res://entities/building/town_center/centro_biodiversidade.gd" id="1_ft5m5"]
+[ext_resource type="Texture2D" uid="uid://carpy0iilsjgt" path="res://assents/tilesets/CentroBio.png" id="2_q5vyp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5vyp"]
+size = Vector2(55.34118, 41.78824)
+
+[node name="CentroBiodiversidade" type="StaticBody2D" unique_id=1553134030 groups=["centros"]]
+position = Vector2(1, 1)
+script = ExtResource("1_ft5m5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1705517817]
+position = Vector2(-1.0000001, -6.999999)
+scale = Vector2(0.095458955, 0.06835936)
+texture = ExtResource("2_q5vyp")
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=2037265411]
+position = Vector2(-1.0000002, -7)
+scale = Vector2(1.7708334, 1.7708333)
+shape = SubResource("RectangleShape2D_q5vyp")
+
+[node name="TimerGerador" type="Timer" parent="." unique_id=1066182319]

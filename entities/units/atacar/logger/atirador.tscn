@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://dxcm288fujql6"]
+
+[ext_resource type="Script" uid="uid://b60dblqoqeado" path="res://entities/units/atacar/logger/atirador.gd" id="1_qyrue"]
+[ext_resource type="Texture2D" uid="uid://0n6imgkfficc" path="res://assents/tilesets/Atirador.png" id="2_0a6q6"]
+[ext_resource type="Texture2D" uid="uid://bv7q6dfao6r3e" path="res://assents/tilesets/attack_atirador.png" id="2_g8sgm"]
+[ext_resource type="Texture2D" uid="uid://pjue8v0gnyu7" path="res://assents/tilesets/walk_atirador.png" id="4_r31a1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awoht"]
+atlas = ExtResource("2_g8sgm")
+region = Rect2(709, 0, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy41g"]
+atlas = ExtResource("2_g8sgm")
+region = Rect2(1378, 682, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vbb2"]
+atlas = ExtResource("2_g8sgm")
+region = Rect2(1378, 0, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rm3a"]
+atlas = ExtResource("2_g8sgm")
+region = Rect2(40, 682, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ln3nl"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(40, 0, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51va6"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(709, 0, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exapj"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(1378, 0, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41n3i"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(40, 682, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj17s"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(709, 682, 669, 682)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3r58"]
+atlas = ExtResource("4_r31a1")
+region = Rect2(1378, 682, 669, 682)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qh41u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awoht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy41g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vbb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rm3a")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0a6q6")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ln3nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51va6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exapj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41n3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj17s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3r58")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8sgm"]
+
+[node name="Atirador" type="CharacterBody2D" unique_id=1183764458]
+script = ExtResource("1_qyrue")
+
+[node name="Animacao" type="AnimatedSprite2D" parent="." unique_id=218176330]
+position = Vector2(408.80536, 271.39453)
+scale = Vector2(0.7091021, 0.61467874)
+sprite_frames = SubResource("SpriteFrames_qh41u")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266983212]
+shape = SubResource("RectangleShape2D_g8sgm")
+
+[node name="TimerAtaque" type="Timer" parent="." unique_id=692530754]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://1rx4go51uch3"]
+
+[ext_resource type="Script" uid="uid://d1m2m4f7dj3nr" path="res://ui/main_menu/tela_inicio.gd" id="1_hdy3d"]
+[ext_resource type="Texture2D" uid="uid://d25g8fllvdsip" path="res://assents/tilesets/Menu.png" id="2_hdy3d"]
+
+[node name="TelaInicio" type="Control" unique_id=1359038003]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdy3d")
+
+[node name="fundo" type="TextureRect" parent="." unique_id=1614989936]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0027777778
+anchor_right = 1.0
+anchor_bottom = 0.99722224
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hdy3d")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ContainerCentral" type="CenterContainer" parent="." unique_id=1291808231]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColunaMenu" type="VBoxContainer" parent="ContainerCentral" unique_id=1838701810]
+layout_mode = 2
+
+[node name="Titulo_jogo" type="Label" parent="ContainerCentral/ColunaMenu" unique_id=705438643]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "O Despertar do Verde
+"
+
+[node name="Inciar_jogo" type="Button" parent="ContainerCentral/ColunaMenu" unique_id=1798886983]
+layout_mode = 2
+text = "Iniciar Jogo"
+
+[node name="Sair_do_jogo" type="Button" parent="ContainerCentral/ColunaMenu" unique_id=1688217040]
+layout_mode = 2
+text = "Sair do jogo"
+
+[connection signal="pressed" from="ContainerCentral/ColunaMenu/Inciar_jogo" to="." method="_on_inciar_jogo_pressed"]
+[connection signal="pressed" from="ContainerCentral/ColunaMenu/Sair_do_jogo" to="." method="_on_sair_do_jogo_pressed"]

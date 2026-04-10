@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cia30x1hjfjvm"]
+
+[ext_resource type="Script" uid="uid://cb83ak50u11lm" path="res://entities/units/atacar/logger/projetil.gd" id="1_4h3qx"]
+[ext_resource type="Texture2D" uid="uid://vpucpwvwpv02" path="res://assents/tilesets/attack.png" id="2_2t375"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5dn0e"]
+radius = 2.236068
+
+[node name="Projetil" type="Area2D" unique_id=1837731482]
+script = ExtResource("1_4h3qx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=524695555]
+position = Vector2(1.9073486e-06, 0)
+scale = Vector2(0.07698403, 0.071126305)
+texture = ExtResource("2_2t375")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=41378543]
+shape = SubResource("CircleShape2D_5dn0e")

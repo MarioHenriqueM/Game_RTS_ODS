@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://koegeq6pyxyk"]
+
+[ext_resource type="Script" uid="uid://ibxcmiq5lr63" path="res://ui/tela_vitoria/tela_vitoria.gd" id="1_64utc"]
+[ext_resource type="Texture2D" uid="uid://dk3b353djl2g6" path="res://assents/tilesets/Tela_vitoria.png" id="2_8fajt"]
+
+[node name="TelaVitoria" type="Control" unique_id=1914804277]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64utc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=971775906]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 3.0
+offset_right = 1273.0
+offset_bottom = 717.0
+texture = ExtResource("2_8fajt")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1591728002]
+layout_mode = 0
+offset_left = 577.6033
+offset_top = 243.6529
+offset_right = 901.6033
+offset_bottom = 301.6529
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1531799599]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2140060180]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "MISSÃO CUMPRIDA! O BIOMA ESTÁ SALVO"
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Label" unique_id=1365872523]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.022000002
+anchor_top = -2.049
+anchor_right = -0.022000002
+anchor_bottom = -2.049
+offset_left = -3.4752707
+offset_top = 65.474106
+offset_right = 364.0417
+offset_bottom = 96.70039
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "A Agente Gaia restaurou o equilíbrio da ODS 15"
+
+[node name="BotaoMenu" type="Button" parent="CenterContainer/VBoxContainer" unique_id=359011943]
+layout_mode = 2
+text = "Volta ao Menu Principal"
+icon_alignment = 1
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotaoMenu" to="." method="_on_button_pressed"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c5fdddlptkkll"]
+
+[ext_resource type="Script" uid="uid://c2urroohmpwdl" path="res://entities/building/Barreira/barreira.gd" id="1_ra0lb"]
+[ext_resource type="Texture2D" uid="uid://ce06saptgmpuk" path="res://assents/tilesets/Barreira.jpeg.png" id="2_xhb1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbl6a"]
+size = Vector2(83.5, 75.5)
+
+[node name="Barreira" type="StaticBody2D" unique_id=1893102864 groups=["Barreiras"]]
+script = ExtResource("1_ra0lb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1801223147]
+scale = Vector2(0.03665161, 0.032470703)
+texture = ExtResource("2_xhb1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1424779858]
+shape = SubResource("RectangleShape2D_gbl6a")
